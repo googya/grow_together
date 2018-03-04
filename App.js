@@ -16,7 +16,7 @@ const RootStack = StackNavigator({
   },
 
   {
-    initialRouteName: 'Detail',
+    initialRouteName: 'Home',
   });
 
 export default class App extends Component {
