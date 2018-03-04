@@ -3,12 +3,8 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableOpacity,
-  InteractionManager,
   Dimensions,
-  FlatList,
   Image,
-  ImageBackground,
 } from 'react-native'
 import Button from '../components/button';
 
@@ -22,7 +18,10 @@ export default class HomeScreen extends Component {
         <Image source={require("../images/biking.png")} style={styles.banner}/>
         <Image source={require('../images/ground.png')}  />
         <View style={{backgroundColor: '#D9F1F5', flex: 1, alignItems: 'center', justifyContent: 'space-between', width}}>
-          <Button style={styles.button}>Get Started</Button>
+          <Button
+            style={styles.button}
+            onPress={() => this.props.navigation.navigate('Detail')}
+          >Get Started</Button>
           <Text style={styles.footer}> By continuing, you agree to our Terms of Use & Privacy Policy</Text>
         </View>
       </View>
